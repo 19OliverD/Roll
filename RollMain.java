@@ -1,4 +1,11 @@
-//Imports
+/**
+ * This is a program that rolls dice using JFrame and buttons.
+ * 
+ * @author Oliver Doig
+ * @version 1.0.1
+ * 
+ */
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -25,10 +32,11 @@ JLabel label = new JLabel("Spin to Win!");
 	panel.add(d6);
 	panel.add(d8);
 	panel.add(label);
+	
 	//Button Parameters
-	d6.addActionListener(new Action2());
-	d20.addActionListener(new Action());
-	d8.addActionListener(new Action3());
+	d6.addActionListener(new GenericDice(6,label));
+	d20.addActionListener(new GenericDice(20,label));
+	d8.addActionListener(new GenericDice(8,label));
 	
 	}
 }
